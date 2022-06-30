@@ -1,0 +1,37 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{      
+    int i,n,j,k;
+    cout<<"Enter the maximum size of pyramid"<<endl;
+    cin>>n;
+    k=2*n;
+    //Inverted Pyramid
+    for(i=1;i<n;i++)
+    {
+        j=i;
+        while(j>0)
+        {
+           cout<<" "; 
+           j--;
+        }
+        cout<< setw(k) <<setfill('*')<<"\n";
+        k=k-2;
+    }
+    //Regular Pyramid
+    k=0;
+    for(i=n;i>0;i--)
+    {
+        j=i;
+        while(j>0)
+        {
+           cout<<" "; 
+           j--;
+        }
+        k=k+2;
+        cout<< setw(k) <<setfill('*')<<"\n";
+    }
+    return 0;
+}
